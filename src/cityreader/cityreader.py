@@ -31,9 +31,6 @@ class City:
 cities = []
 
 def cityreader(cities=[]):
-    # TODO Implement the functionality to read from the 'cities.csv' file
-    # For each city record, create a new City instance and add it to the 
-    # `cities` list
     with open(csv_file, 'r', newline='') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -91,10 +88,5 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
           and min(lon1, lon2) <= city.lon <= max(lon1, lon2)
       ):
         within.append(city)
-
-
-  # TODO Ensure that the lat and lon values are all floats
-  # Go through each city and check to see if it falls within 
-  # the specified coordinates.
 
   return within
